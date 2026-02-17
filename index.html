@@ -2,11 +2,200 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Página en GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Tiznado | Currículum Profesional</title>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>¡Página principal!</h1>
-    <p>Esta es mi nueva página web .</p>
-    <p>Pronto estará disponible en: github.io</p>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">DT</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN PRINCIPAL (INICIO) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <!-- Foto centralizada -->
+            <div class="foto-perfil">
+                <img src="assets/foto-perfil.jpg" alt="Daniel Tiznado" class="foto">
+            </div>
+            <!-- Título profesional -->
+            <h1 class="nombre">Daniel Tiznado</h1>
+            <h2 class="titulo">Ingeniero en Informática | Desarrollador Full Stack</h2>
+            <!-- Breve descripción -->
+            <p class="descripcion-corta">
+                +5 años de experiencia creando soluciones tecnológicas innovadoras. 
+                Apasionado por el desarrollo web y la arquitectura de software.
+            </p>
+            <!-- Botones de acción -->
+            <div class="botones">
+                <a href="#contacto" class="btn btn-primario">Contáctame</a>
+                <a href="assets/cv.pdf" download class="btn btn-secundario">
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA LABORAL -->
+    <section id="experiencia" class="experiencia">
+        <div class="container">
+            <h2 class="seccion-titulo">📁 Experiencia Profesional</h2>
+            
+            <div class="timeline">
+                <!-- Experiencia 1 -->
+                <div class="item-experiencia">
+                    <div class="fecha">2022 - Presente</div>
+                    <div class="contenido">
+                        <h3>Desarrollador Full Stack Senior</h3>
+                        <h4>Empresa Innovación Tech · Santiago, Chile</h4>
+                        <ul>
+                            <li>Lideré el desarrollo de 3 aplicaciones web con React y Node.js</li>
+                            <li>Optimicé consultas a base de datos reduciendo tiempos de respuesta en un 40%</li>
+                            <li>Coordiné un equipo de 5 desarrolladores en metodologías ágiles (Scrum)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 2 -->
+                <div class="item-experiencia">
+                    <div class="fecha">2019 - 2022</div>
+                    <div class="contenido">
+                        <h3>Desarrollador Web Junior</h3>
+                        <h4>Agencia Digital Crea · Santiago, Chile</h4>
+                        <ul>
+                            <li>Desarrollé más de 15 sitios web responsivos para clientes</li>
+                            <li>Implementé sistemas de gestión de contenido (WordPress personalizado)</li>
+                            <li>Colaboré en el diseño de interfaces de usuario (UI/UX)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EDUCACIÓN -->
+    <section id="educacion" class="educacion">
+        <div class="container">
+            <h2 class="seccion-titulo">🎓 Formación Académica</h2>
+            
+            <div class="grid-educacion">
+                <!-- Educación 1 -->
+                <div class="card-educacion">
+                    <h3>Ingeniería en Informática</h3>
+                    <p class="institucion">Universidad Tecnológica Metropolitana</p>
+                    <p class="periodo">2015 - 2020</p>
+                    <p class="descripcion">Titulado con distinción máxima. Proyecto de título enfocado en inteligencia artificial.</p>
+                </div>
+                
+                <!-- Educación 2 -->
+                <div class="card-educacion">
+                    <h3>Diplomado en Desarrollo Full Stack</h3>
+                    <p class="institucion">Pontificia Universidad Católica de Chile</p>
+                    <p class="periodo">2021 - 2022</p>
+                    <p class="descripcion">Especialización en React, Node.js, MongoDB y arquitectura de microservicios.</p>
+                </div>
+                
+                <!-- Certificaciones -->
+                <div class="card-educacion">
+                    <h3>Certificaciones</h3>
+                    <ul class="lista-certificaciones">
+                        <li>✓ AWS Certified Cloud Practitioner (2023)</li>
+                        <li>✓ Scrum Master Professional (2022)</li>
+                        <li>✓ Google Analytics Individual Qualification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section id="habilidades" class="habilidades">
+        <div class="container">
+            <h2 class="seccion-titulo">💡 Habilidades Técnicas</h2>
+            
+            <div class="grid-habilidades">
+                <div class="categoria">
+                    <h3>Frontend</h3>
+                    <div class="habilidad"><span>HTML5/CSS3</span> <span class="nivel">95%</span></div>
+                    <div class="barra-progreso"><div style="width:95%"></div></div>
+                    
+                    <div class="habilidad"><span>JavaScript (ES6+)</span> <span class="nivel">90%</span></div>
+                    <div class="barra-progreso"><div style="width:90%"></div></div>
+                    
+                    <div class="habilidad"><span>React</span> <span class="nivel">85%</span></div>
+                    <div class="barra-progreso"><div style="width:85%"></div></div>
+                </div>
+                
+                <div class="categoria">
+                    <h3>Backend</h3>
+                    <div class="habilidad"><span>Node.js</span> <span class="nivel">85%</span></div>
+                    <div class="barra-progreso"><div style="width:85%"></div></div>
+                    
+                    <div class="habilidad"><span>Python</span> <span class="nivel">75%</span></div>
+                    <div class="barra-progreso"><div style="width:75%"></div></div>
+                    
+                    <div class="habilidad"><span>Bases de datos SQL</span> <span class="nivel">80%</span></div>
+                    <div class="barra-progreso"><div style="width:80%"></div></div>
+                </div>
+                
+                <div class="categoria">
+                    <h3>Herramientas</h3>
+                    <div class="habilidad"><span>Git/GitHub</span> <span class="nivel">90%</span></div>
+                    <div class="barra-progreso"><div style="width:90%"></div></div>
+                    
+                    <div class="habilidad"><span>Docker</span> <span class="nivel">70%</span></div>
+                    <div class="barra-progreso"><div style="width:70%"></div></div>
+                    
+                    <div class="habilidad"><span>Figma</span> <span class="nivel">75%</span></div>
+                    <div class="barra-progreso"><div style="width:75%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="seccion-titulo">📫 Contacto</h2>
+            
+            <div class="grid-contacto">
+                <div class="info-contacto">
+                    <p><i class="fas fa-envelope"></i> daniel.tiznado@email.com</p>
+                    <p><i class="fas fa-phone"></i> +56 9 1234 5678</p>
+                    <p><i class="fab fa-linkedin"></i> /in/daniel-tiznado</p>
+                    <p><i class="fab fa-github"></i> daniel-tiznado</p>
+                </div>
+                
+                <form class="formulario-contacto">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu email" required>
+                    <textarea rows="4" placeholder="Mensaje"></textarea>
+                    <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Daniel Tiznado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
