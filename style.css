@@ -356,8 +356,22 @@ footer#foot {
     opacity: 1;
 }
 
-/* Máscara de la linterna */
+/* Máscara de la linterna - VERSIÓN CORREGIDA (blanco) */
 #maskFoot {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle var(--radio) at var(--x, -200%) var(--y, -200%),
+        rgba(255, 255, 255, 0.95) 0%,    /* Centro blanco brillante */
+        rgba(255, 255, 255, 0.6) 30%,     /* Blanco suave */
+        rgba(26, 32, 44, 0.8) 70%,        /* Transición a oscuro */
+        #1a202c 100%                       /* Fondo completamente oscuro */
+    );
+    z-index: 6;
+}
+/* Máscara de la linterna color negro*/
+/* #maskFoot {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -368,10 +382,11 @@ footer#foot {
     );
     z-index: 6;
 }
-
+*/
 footer#foot:not(:hover) #maskFoot {
     background: #1a202c;
 }
+
 
 /* Guía visual (círculo y cruz) */
 #guia {
@@ -396,6 +411,7 @@ footer#foot:not(:hover) #maskFoot {
     box-shadow: 0 0 15px rgba(49, 130, 206, 0.3);
 }
 
+/* ANTERIOR
 #guia::after {
     border: none;
     background:
@@ -403,6 +419,16 @@ footer#foot:not(:hover) #maskFoot {
         linear-gradient(to bottom, transparent 49.75%, var(--colorGuia) 49.75% 50.25%, transparent 50.25%) 50% 50% / var(--linea) 100% no-repeat;
     opacity: 0.6;
 }
+FIN ANTERIOR */ 
+#guia::after {
+    /* ... resto del código ... */
+    border: var(--linea) solid #ffffff;  /* Cambiado a blanco puro */
+    opacity: 0.6;                         /* Un poco más visible */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Brillo blanco */
+}
+
+
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
