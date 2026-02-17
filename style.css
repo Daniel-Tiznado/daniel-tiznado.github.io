@@ -315,6 +315,10 @@ section {
     cursor: pointer;
 }
 
+
+/*  PRIMER FOOTER  
+############################################################
+############################################################
 /* ===== FOOTER INTERACTIVO ===== */
 footer#foot {
     position: relative;
@@ -426,6 +430,149 @@ FIN ANTERIOR */
     opacity: 0.6;                         /* Un poco más visible */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Brillo blanco */
 }
+##########################
+##########################
+FIN PRIMER FOOTER */
+
+/*     NUEVO FOOTER   */
+/* ===== FOOTER INTERACTIVO ===== */
+:root {
+    --radio: 70px;        /* Un poco más grande para mejor visibilidad */
+    --linea: 2px;
+    --colorGuia: #ffffff; /* Blanco puro para máxima visibilidad */
+}
+
+footer#foot {
+    position: relative;
+    height: 260px;
+    background: #1a202c;
+    overflow: hidden;
+    cursor: none;
+    margin-top: 40px;
+}
+
+.buscame {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    z-index: 20;          /* Aumentado para estar sobre todo */
+    pointer-events: none;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra para destacar */
+}
+
+/* Iconos */
+.social.random {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    fill: #fff;
+    transition: transform 0.25s ease, fill 0.2s;
+    z-index: 15;           /* Por encima del fondo pero debajo de la guía */
+    opacity: 0.9;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+}
+
+.social.random:hover {
+    transform: scale(1.3);
+    fill: #3182CE;         /* Azul al hacer hover */
+    opacity: 1;
+}
+
+/* MÁSCARA PRINCIPAL - Efecto linterna */
+#maskFoot {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle var(--radio) at var(--x, -200%) var(--y, -200%),
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.7) 40%,
+        rgba(26, 32, 44, 0.8) 80%,
+        #1a202c 100%
+    );
+    z-index: 10;
+}
+
+footer#foot:not(:hover) #maskFoot {
+    background: #1a202c;
+}
+
+/* GUÍA - Círculo y cruz VISIBLES */
+#guia {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 30;           /* El valor más alto para estar sobre todo */
+}
+
+/* Círculo exterior */
+#guia::before {
+    content: '';
+    position: absolute;
+    left: var(--x, -100px);
+    top: var(--y, -100px);
+    width: calc(var(--radio) * 2);
+    height: calc(var(--radio) * 2);
+    border: 3px solid #ffffff;  /* Blanco, más grueso */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;               /* Mucho más visible */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Brillo intenso */
+    background: transparent;
+}
+
+/* Cruz interior */
+#guia::after {
+    content: '';
+    position: absolute;
+    left: var(--x, -100px);
+    top: var(--y, -100px);
+    width: calc(var(--radio) * 2);
+    height: calc(var(--radio) * 2);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    background: 
+        /* Línea horizontal */
+        linear-gradient(to right, 
+            transparent 48%, 
+            #ffffff 48% 52%, 
+            transparent 52%
+        ) 0 0 / 100% 100% no-repeat,
+        /* Línea vertical */
+        linear-gradient(to bottom, 
+            transparent 48%, 
+            #ffffff 48% 52%, 
+            transparent 52%
+        ) 0 0 / 100% 100% no-repeat;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Versión para móviles */
+@media (max-width: 768px) {
+    footer#foot {
+        height: 200px;
+    }
+    
+    .social.random {
+        width: 32px;
+        height: 32px;
+    }
+    
+    :root {
+        --radio: 50px;
+    }
+    
+    #guia::before {
+        border-width: 2px;
+    }
+}
+
 
 
 
