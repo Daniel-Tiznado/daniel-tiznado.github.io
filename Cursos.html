@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Título específico para esta página -->
+    <title>Cursos y Formación Continua | Daniel Tiznado Velásquez</title>
+    
+    <!-- Descripción única para Cursos -->
+    <meta name="description" content="Portafolio de cursos y certificaciones de Daniel Tiznado Velásquez: desarrollo web, gestión ágil, seguridad informática, análisis de datos y gestión de personas. Formación práctica aplicada en proyectos reales de tecnología.">
+    
+    <!-- Autor y palabras clave -->
+    <meta name="author" content="Daniel Tiznado Velásquez">
+    <meta name="keywords" content="cursos TI, certificaciones, desarrollo web, Scrum, JIRA, Git, Bitbucket, UX UI, ciberseguridad, Azure, Excel, marketing digital, Daniel Tiznado">
+    
+    <!-- Idioma -->
+    <meta name="language" content="Spanish">
+    <meta http-equiv="content-language" content="es">
+    
+    <!-- Canonical: URL oficial de esta página -->
+    <link rel="canonical" href="https://daniel-tiznado.github.io/Cursos.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Cursos y Formación Continua | Daniel Tiznado Velásquez">
+    <meta property="og:description" content="Certificaciones y cursos especializados en desarrollo web, gestión ágil de proyectos, seguridad informática, análisis de datos y liderazgo organizacional. Formación aplicada a la transformación digital.">
+    <meta property="og:image" content="https://daniel-tiznado.github.io/daniel-tiznado.png">
+    <meta property="og:url" content="https://daniel-tiznado.github.io/Cursos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Daniel Tiznado Velásquez">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cursos y Formación Continua | Daniel Tiznado Velásquez">
+    <meta name="twitter:description" content="Certificaciones en desarrollo web, Scrum, JIRA, Git, UX/UI, ciberseguridad y gestión de proyectos. Formación continua aplicada a TI.">
+    <meta name="twitter:image" content="https://daniel-tiznado.github.io/daniel-tiznado.png">
+    
+    <!-- Schema.org: Datos estructurados para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Cursos y Formación Continua - Daniel Tiznado Velásquez",
+      "description": "Portafolio interactivo de cursos y certificaciones profesionales en tecnología, gestión ágil, seguridad, datos y desarrollo de personas.",
+      "url": "https://daniel-tiznado.github.io/Cursos.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Daniel Tiznado Velásquez",
+        "jobTitle": "Ingeniero en Telecomunicaciones y Magíster en Planificación y Control de Gestión",
+        "url": "https://daniel-tiznado.github.io/",
+        "image": "https://daniel-tiznado.github.io/daniel-tiznado.png",
+        "knowsAbout": ["Desarrollo Web", "Gestión Ágil", "Scrum", "JIRA", "Git", "UX/UI", "Ciberseguridad", "Azure", "Análisis de Datos", "Liderazgo Organizacional"]
+      }
+    }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+/*
+==============================
+GUÍA RÁPIDA DE PERSONALIZACIÓN:
+==============================
+1. Para cambiar el nombre de los cursos: Busca la sección courses y modifica el campo title.
+2. Para cambiar las habilidades del reverso: Modifica el array skills en cada curso.
+3. Para cambiar la descripción del curso: Modifica el campo description.
+4. Para añadir un nuevo curso: Agrega un nuevo objeto al array courses con id único.
+5. Para cambiar las imágenes de las modales: Modifica el campo image en categoriesConfig.
+6. Para cambiar colores: Ajusta las variables color en categoriesConfig.
+===============================*/
+
+        /* ============================================
+           ESTILOS PRINCIPALES
+           ============================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #4a2510 0%, #111111 45%, #0c2440 100%);
+    background-attachment: fixed;
+    padding: 40px 20px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+    color: #e0e0e0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+        /* ============================================
+           BARRAS LATERALES MEJORADAS (VERSIÓN PRO)
+           ============================================ */
+
+        .left-dark {
+            width: 60px;
+            height: 100%;
+            background: rgba(198, 109, 26, 0.08);
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            animation: slideInLeft 0.5s ease forwards;
+        }
+
+        .right-dark {
+            width: 60px;
+            height: 100%;
+            background: rgba(0, 126, 192, 0.08);
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            animation: slideInRight 0.5s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .icon-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 22px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-link::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .icon-link:hover::before {
+            left: 100%;
+        }
+
+        .icon-link:hover {
+            transform: scale(1.2);
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .left-dark:hover {
+            background-color: #c66d1a;
+            width: 65px;
+            backdrop-filter: blur(0);
+        }
+
+        .right-dark:hover {
+            background-color: #007ec0;
+            width: 65px;
+            backdrop-filter: blur(0);
+        }
+
+        .left-dark:hover .icon-link,
+        .right-dark:hover .icon-link {
+            color: white;
+        }
+
+        .custom-tooltip {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            white-space: nowrap;
+            z-index: 1001;
+            pointer-events: none;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: opacity 0.2s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 70px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        .categories {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: transparent;
+            border: 1px solid #555555;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color:#dddddd;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .category-btn:hover {
+            border-color: #999;
+            color: #dddddd;
+        }
+
+        .category-btn.active {
+            background: #1a1a1a;
+            border-color: #1a1a1a;
+            color: white;
+        }
+
+        .category-btn.completed {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #92400e;
+            animation: softGlow 1.5s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes softGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            50% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2); }
+        }
+
+        .category-btn.completed::before {
+            content: "✨";
+            position: absolute;
+            left: -8px;
+            top: -8px;
+            font-size: 14px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .course-card-container {
+            background: transparent;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .course-card {
+            background: #e0dada;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 14px 18px;
+            transition: all 0.2s ease;
+            user-select: none;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+            transform-origin: center;
+            min-height: 110px;
+            display: flex;
+            align-items: center;
+        }
+
+        .course-card-container.viewed-container:hover .course-card {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            backface-visibility: hidden;
+            width: 100%;
+        }
+
+        .card-front {
+            transform: rotateY(0deg);
+        }
+
+        .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            padding: 14px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .card-back h4 {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card-back-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .card-back-skill {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+        }
+
+        .course-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #484848;
+            margin-bottom: 6px;
+        }
+
+        .course-category {
+            font-size: 0.75rem;
+            color: #484848;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .course-category span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .course-card.web { border-left: 3px solid #3b82f6; }
+        .course-card.agile { border-left: 3px solid #f59e0b; }
+        .course-card.security { border-left: 3px solid #ef4444; }
+        .course-card.data { border-left: 3px solid #10b981; }
+        .course-card.management { border-left: 3px solid #8b5cf6; }
+
+        .web .course-category span { background: #3b82f6; }
+        .agile .course-category span { background: #f59e0b; }
+        .security .course-category span { background: #ef4444; }
+        .data .course-category span { background: #10b981; }
+        .management .course-category span { background: #8b5cf6; }
+
+        .status-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            margin-left: 8px;
+            animation: pulseDot 1s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { opacity: 0.4; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .course-card-container.viewed-container .course-card.viewed {
+            background: #e8e8e8;
+            border-color: #d0d0d0;
+            transform: scale(0.98);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .course-card-container.viewed-container:hover .course-card.viewed {
+            transform: rotateY(180deg);
+        }
+
+        @keyframes blinkAttention {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+                border-color: #3b82f6;
+                background-color: rgba(59, 130, 246, 0.05);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.4), 0 0 0 4px rgba(59, 130, 246, 0.6);
+                border-color: #3b82f6;
+                background-color: rgba(59, 130, 246, 0.15);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+                border-color: #3b82f6;
+                background-color: rgba(59, 130, 246, 0.05);
+            }
+        }
+
+        .course-card-container.pending-blink .course-card {
+            animation: blinkAttention 0.8s ease-in-out 5;
+            border-color: #3b82f6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .course-card-container.sustained-blink .course-card {
+            animation: blinkAttention 0.9s ease-in-out infinite;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+
+        .details-panel {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            margin: 20px 0 30px 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .details-panel.hidden {
+            display: none;
+        }
+
+        .details-header {
+            padding: 20px 24px;
+            background: #fafafa;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .details-header h3 {
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .details-content {
+            padding: 24px;
+        }
+
+        .course-detail-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .course-detail-description {
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .course-detail-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #000000;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #111111;
+            border-radius: 16px;
+            border: 1px solid #ffffff;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            height: auto;
+            overflow-y: auto;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #ffffff;
+            z-index: 20;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+            transition: transform 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #e0e0e0;
+            transform: scale(1.1);
+        }
+
+        .modal-header-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .modal-image {
+            width: 100%;
+            aspect-ratio: 4.5 / 1;
+            min-height: 180px;
+            max-height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .modal-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(17, 17, 17, 1) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .modal-image.fallback {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .modal h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin: 0 0 16px 0;
+            line-height: 1.3;
+        }
+
+        .modal-body-wrapper {
+            flex: 1 1 75%;
+            padding: 20px 24px 24px 24px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-description {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+        }
+
+        .modal-highlights {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-highlights h4 {
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-highlights li {
+            font-size: 0.95rem;
+            padding: 10px 0;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .modal-highlights li:last-child {
+            border-bottom: none;
+        }
+
+        .modal-highlights li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .course-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #111111;
+            font-weight: 700;
+        }
+
+        /* ============================================
+           COMPONENTES MÓVILES (ocultos en desktop)
+           ============================================ */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 200;
+            width: 48px;
+            height: 48px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(198, 109, 26, 0.2);
+            border-color: #c66d1a;
+        }
+
+        .mobile-menu-btn:active {
+            transform: scale(0.95);
+        }
+
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(3px);
+            z-index: 180;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: rgba(15, 15, 20, 0.98);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 190;
+            padding: 80px 0 30px;
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow-y: auto;
+            pointer-events: auto;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .mobile-nav-close:hover {
+            background: rgba(198, 109, 26, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .mobile-nav-header {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding: 0 25px 15px;
+            border-bottom: 2px solid #c66d1a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-nav-header i {
+            color: #c66d1a;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 14px 25px;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+            pointer-events: auto;
+        }
+
+        .mobile-nav-item:hover,
+        .mobile-nav-item.active {
+            background: rgba(198, 109, 26, 0.1);
+            color: #c66d1a;
+            border-left-color: #c66d1a;
+            padding-left: 28px;
+        }
+
+        .mobile-nav-item i {
+            width: 24px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s ease;
+        }
+
+        .mobile-nav-item:hover i,
+        .mobile-nav-item.active i {
+            color: #c66d1a;
+        }
+
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 65px;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 100;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 10px;
+            pointer-events: auto;
+        }
+
+        .mobile-bottom-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.65rem;
+            transition: all 0.3s ease;
+            flex: 1;
+            height: 100%;
+            padding: 8px 0;
+            pointer-events: auto;
+            position: relative;
+            z-index: 101;
+        }
+
+        .mobile-bottom-item i {
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-bottom-item:hover,
+        .mobile-bottom-item.active {
+            color: #c66d1a;
+        }
+
+        .mobile-bottom-item.active i {
+            transform: scale(1.1);
+        }
+
+        .mobile-nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .mobile-nav::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .mobile-nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 2px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* ============================================
+           MEDIA QUERIES RESPONSIVE
+           ============================================ */
+        @media (max-width: 1280px) {
+            .container {
+                padding: 0 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 70px 16px 90px;
+                padding-bottom: 90px;
+            }
+
+            .container {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .header {
+                margin-bottom: 25px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .header p {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            .categories {
+                gap: 8px;
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+
+            .category-btn {
+                padding: 6px 14px;
+                font-size: 0.8rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .course-card-container {
+                perspective: none;
+            }
+
+            .course-card {
+                min-height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px;
+                transform: none !important;
+                transition: all 0.2s ease;
+            }
+
+            .course-card-container.viewed-container:hover .course-card {
+                transform: none !important;
+            }
+
+            .card-front {
+                width: 100%;
+                transform: none;
+                position: relative;
+            }
+
+            .card-back {
+                position: relative;
+                transform: none;
+                background: transparent;
+                border-radius: 0;
+                padding: 12px 0 0 0;
+                margin-top: 12px;
+                border-top: 1px solid rgba(0,0,0,0.1);
+                width: 100%;
+            }
+
+            .card-back h4 {
+                color: #484848;
+                font-size: 0.8rem;
+                margin-bottom: 6px;
+            }
+
+            .card-back-skill {
+                background: rgba(0,0,0,0.08);
+                color: #484848;
+                font-size: 0.75rem;
+                padding: 3px 10px;
+            }
+
+            .course-title {
+                font-size: 0.95rem;
+            }
+
+            .course-category {
+                font-size: 0.8rem;
+            }
+
+            .details-panel {
+                margin: 15px 0 20px;
+                border-radius: 12px;
+            }
+
+            .details-header {
+                padding: 16px 20px;
+            }
+
+            .details-content {
+                padding: 20px;
+            }
+
+            .course-detail-title {
+                font-size: 1.1rem;
+            }
+
+            .course-detail-description {
+                font-size: 0.9rem;
+            }
+
+            .skill-tag {
+                font-size: 0.75rem;
+                padding: 3px 10px;
+            }
+
+            .left-dark,
+            .right-dark {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .mobile-nav-overlay {
+                display: block;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+
+            .mobile-bottom-bar {
+                display: flex;
+            }
+
+            .modal {
+                padding: 10px;
+                align-items: flex-end;
+            }
+
+            .modal.active {
+                align-items: center;
+            }
+
+            .modal-content {
+                max-width: 100%;
+                width: 100%;
+                max-height: 90vh;
+                border-radius: 16px;
+            }
+
+            .modal-image {
+                aspect-ratio: 16 / 9;
+                min-height: 150px;
+                max-height: 180px;
+            }
+
+            .modal h2 {
+                font-size: 1.1rem;
+                margin: 0 0 12px 0;
+            }
+
+            .modal-body-wrapper {
+                padding: 16px 18px 18px;
+            }
+
+            .modal-description {
+                font-size: 0.9rem;
+                padding-left: 14px;
+                margin-bottom: 18px;
+            }
+
+            .modal-highlights {
+                padding: 14px;
+            }
+
+            .modal-highlights h4 {
+                font-size: 0.85rem;
+            }
+
+            .modal-highlights li {
+                font-size: 0.85rem;
+                padding: 8px 0;
+                padding-left: 20px;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 14px;
+                font-size: 24px;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 60px 12px 80px;
+            }
+
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .header p {
+                font-size: 0.85rem;
+            }
+
+            .category-btn {
+                padding: 5px 12px;
+                font-size: 0.75rem;
+            }
+
+            .course-card {
+                padding: 14px;
+            }
+
+            .course-title {
+                font-size: 0.9rem;
+            }
+
+            .card-back h4 {
+                font-size: 0.75rem;
+            }
+
+            .card-back-skill {
+                font-size: 0.7rem;
+                padding: 2px 8px;
+            }
+
+            .details-header {
+                padding: 14px 16px;
+            }
+
+            .details-content {
+                padding: 16px;
+            }
+
+            .modal-content {
+                border-radius: 14px;
+            }
+
+            .modal-image {
+                min-height: 130px;
+                border-radius: 14px 14px 0 0;
+            }
+
+            .modal h2 {
+                font-size: 1rem;
+            }
+
+            .modal-body-wrapper {
+                padding: 14px 16px 16px;
+            }
+
+            .modal-description {
+                font-size: 0.85rem;
+            }
+
+            .modal-highlights {
+                padding: 12px;
+            }
+
+            .modal-highlights li {
+                font-size: 0.8rem;
+            }
+
+            .mobile-bottom-bar {
+                height: 60px;
+            }
+
+            .mobile-bottom-item {
+                font-size: 0.6rem;
+                gap: 3px;
+            }
+
+            .mobile-bottom-item i {
+                font-size: 1.1rem;
+            }
+
+            .mobile-menu-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+                top: 10px;
+                left: 10px;
+            }
+
+            .mobile-nav {
+                width: 260px;
+                padding: 70px 0 25px;
+            }
+
+            .mobile-nav-header {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+                padding: 0 20px 12px;
+            }
+
+            .mobile-nav-item {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header h1 {
+                font-size: 1.15rem;
+            }
+
+            .course-card {
+                padding: 12px;
+            }
+
+            .category-btn {
+                padding: 5px 10px;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+            body {
+                padding-top: 50px;
+            }
+
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal {
+                align-items: center;
+                padding: 20px;
+            }
+
+            .modal-content {
+                max-width: 600px;
+            }
+
+            .modal-image {
+                aspect-ratio: 21 / 9;
+                min-height: 120px;
+                max-height: 140px;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="mobile-nav-header">
+        <i class="fas fa-compass"></i>
+        Menú
+    </div>
+    <a href="Principal.html" class="mobile-nav-item">
+        <i class="fas fa-house"></i>
+        <span>Inicio</span>
+    </a>
+    <a href="Perfil.html" class="mobile-nav-item">
+        <i class="fas fa-user-tie"></i>
+        <span>Perfil Profesional</span>
+    </a>
+    <a href="Diplomados.html" class="mobile-nav-item">
+        <i class="fas fa-award"></i>
+        <span>Diplomados</span>
+    </a>
+    <a href="Cursos.html" class="mobile-nav-item active">
+        <i class="fas fa-book-open"></i>
+        <span>Cursos</span>
+    </a>
+    <a href="Tesis.html" class="mobile-nav-item">
+        <i class="fas fa-microscope"></i>
+        <span>Tesis</span>
+    </a>
+    <a href="Experiencia.html" class="mobile-nav-item">
+        <i class="fas fa-briefcase"></i>
+        <span>Experiencia</span>
+    </a>
+    <a href="Documentos.html" class="mobile-nav-item">
+        <i class="fas fa-folder-open"></i>
+        <span>Documentos</span>
+    </a>
+    <a href="RRSS.html" class="mobile-nav-item">
+        <i class="fas fa-share-alt"></i>
+        <span>Redes Sociales</span>
+    </a>
+    <a href="Contacto.html" class="mobile-nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contacto</span>
+    </a>
+</nav>
+
+<div class="left-dark" id="leftDark">
+    <a href="Principal.html" class="icon-link" title="Inicio"><i class="fas fa-house"></i></a>    
+    <a href="Perfil.html" class="icon-link" title="Perfil Profesional"><i class="fas fa-user-tie"></i></a>
+    <a href="Diplomados.html" class="icon-link" title="Diplomados"><i class="fas fa-award"></i></a>
+    <a href="#" class="icon-link" title="Cursos"><i class="fas fa-book-open"></i></a>
+    <a href="Tesis.html" class="icon-link" title="Tesis"><i class="fas fa-microscope"></i></a>
+    <a href="Experiencia.html" class="icon-link" title="Experiencia"><i class="fas fa-briefcase"></i></a>
+</div>
+
+<div class="right-dark" id="rightDark">
+    <a href="Documentos.html" class="icon-link" title="Portafolio"><i class="fas fa-folder-open"></i></a>
+    <a href="RRSS.html" class="icon-link" title="Publicaciones"><i class="fas fa-share-alt"></i></a>
+    <a href="#" class="icon-link" title="Hobbies"><i class="fas fa-gamepad"></i></a>
+    <a href="Contacto.html" class="icon-link" title="Contacto"><i class="fas fa-envelope"></i></a>
+</div>
+
+<div class="container">
+    <div class="header">
+        <h1>📚 Mis Cursos</h1>
+        <p>Explora mi formación continua. Completa cada categoría para descubrir cómo la apliqué en proyectos reales.</p>
+    </div>
+
+    <div class="categories" id="categories"></div>
+
+    <div class="courses-grid" id="coursesGrid"></div>
+
+    <div id="detailsPanel" class="details-panel hidden">
+        <div class="details-header">
+            <h3>📖 Detalles del curso</h3>
+            <span class="course-category-badge" id="detailCategory"></span>
+        </div>
+        <div class="details-content">
+            <h4 class="course-detail-title" id="detailTitle"></h4>
+            <p class="course-detail-description" id="detailDescription"></p>
+            <div class="course-detail-skills" id="detailSkills"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>✨ Pasa el mouse sobre los cursos VISTOS para ver sus habilidades • Completa una categoría y haz click en ella para ver mi experiencia</p>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-header-container">
+            <div class="modal-image" id="modalImage"></div>
+        </div>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-body-wrapper">
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-highlights" id="modalHighlights"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function initTooltips() {
+    const iconLinks = document.querySelectorAll('.icon-link');
+    iconLinks.forEach(link => {
+        link.addEventListener('mouseenter', (e) => {
+            const title = link.getAttribute('title');
+            if (title) {
+                const tooltip = document.createElement('div');
+                tooltip.textContent = title;
+                tooltip.className = 'custom-tooltip';
+                const rect = link.getBoundingClientRect();
+                tooltip.style.left = rect.left + rect.width / 2 + 'px';
+                tooltip.style.top = rect.top - 35 + 'px';
+                tooltip.style.transform = 'translateX(-50%)';
+                document.body.appendChild(tooltip);
+                link.addEventListener('mouseleave', () => tooltip.remove(), { once: true });
+            }
+        });
+    });
+})();
+
+const categoriesConfig = {
+    web: {
+        name: "Desarrollo & Arquitectura Web",
+        icon: "💻",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80",
+        color: "#3b82f6",
+        experience: {
+            title: "De Tester a Arquitecto de calidad",
+            description: "Con estos cursos transformé mi testing: de verificar funciones aisladas a entender cómo el código, la interfaz y la seguridad conversan en un sistema centralizado real.",
+            projects: [
+                "Testing profundo con criterio de arquitecto: React, PHP Symfony y SQL.",
+                "Definición técnica de flujos UX que unifican múltiples plataformas centralizadas.",
+                "Aseguramiento de calidad más allá de la funcionalidad: performance y escalabilidad.",
+                "Documentación de seguridad en el DOM y validación de formularios web.",
+                "Comunicación técnica directa con equipos de desarrollo usando Git y Bitbucket."
+            ]
+        }
+    },
+    agile: {
+        name: "Gestión de Proyectos & Agilidad",
+        icon: "🎯",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+        color: "#f59e0b",
+        experience: {
+            title: "Liderazgo Ágil y Optimización de Flujos de Valor",
+            description: "Esta formación transforma mi rol para facilitar que los equipos entreguen valor continuo. El testing ya no es un cuello de botella final, sino un motor integrado que acelera la validación y liberación de software seguro.",
+            projects: [
+                "Implementación de Scrum en sistemas críticos con reuniones efectivas.",
+                "Gestión estratégica de incidencias y priorización mediante JIRA.",
+                "Facilitación de metodologías ágiles para equipos distribuidos.",
+                "Rediseño de flujos de trabajo para minimizar tiempos de retrabajo."
+            ]
+        }
+    },
+    security: {
+        name: "Seguridad & Infraestructura",
+        icon: "🔒",
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80",
+        color: "#ef4444",
+        experience: {
+            title: "Seguridad Proactiva y Gestión de Riesgos",
+            description: "La capacidad técnica para anticipar vulnerabilidades antes de producción. Esto me permite dialogar de igual a igual con equipos de infraestructura, asegurando que la confidencialidad, integridad y disponibilidad (CIA) sean pilares del desarrollo.",
+            projects: [
+                "Documentación técnica de seguridad en el DOM y prevención de ataques.",
+                "Validación rigurosa de formularios contra vectores de inyección.",
+                "Auditoría técnica de servicios cloud (Azure) junto a equipos de DevOps.",
+                "Integración de criterios de seguridad en las fases tempranas de diseño."
+            ]
+        }
+    },
+    data: {
+        name: "Data & Análisis Estratégico",
+        icon: "📈",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+        color: "#10b981",
+        experience: {
+            title: "Toma de Decisiones Basada en Datos",
+            description: "La combinación de experiencia técnica con un Magíster en Planificación me permite construir argumentos sólidos. Utilizo datos para traducir problemas técnicos en prioridades de negocio, garantizando que los esfuerzos de calidad generen retorno de inversión.",
+            projects: [
+                "Análisis de métricas para priorización de incidencias según impacto económico.",
+                "Reporting avanzado con Excel para visibilidad ejecutiva del estado QA.",
+                "Enfoque Data-Driven para justificar mejoras técnicas y arquitectónicas.",
+                "Puente entre los datos operativos y la planificación estratégica de la organización."
+            ]
+        }
+    },
+    management: {
+        name: "Gestión de Personas & Organización",
+        icon: "👥",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
+        color: "#8b5cf6",
+        experience: {
+            title: "Liderazgo de Equipos Multidisciplinarios",
+            description: "La técnica es la base, pero el liderazgo es el multiplicador. Estos cursos me preparan para coordinar equipos distribuidos, gestionar el cambio cultural y liderar transformaciones digitales manteniendo un criterio humano y ético.",
+            projects: [
+                "Coordinación de equipos remotos y multidisciplinarios en proyectos globales.",
+                "Fomento de una cultura de mejora continua y retrospectivas constructivas.",
+                "Aplicación de marcos de compliance y ética en la gestión de talento.",
+                "Gestión del cambio organizacional en la adopción de nuevas tecnologías.",
+                "Liderazgo de procesos de cambio e innovación en contextos organizacionales complejos"
+            ]
+        }
+    }
+};
+
+const courses = [
+    { id: 1, title: "Learn Git with Bitbucket Cloud, Sourcetree and GUI Hands on", category: "web", viewed: false,
+      description: "Control de versiones como lenguaje común con desarrolladores. Dominio práctico de Git, Bitbucket y Sourcetree para gestionar código, revisar cambios y colaborar en equipos de desarrollo. Esta base me permite navegar repositorios, entender la evolución del código y comunicarme en el mismo idioma que los developers cuando reporto incidencias o valido correcciones.",
+      skills: ["Git", "Bitbucket", "Sourcetree", "Control de Versiones", "Colaboración Dev"] },
+    { id: 2, title: "Introducción a UX y UI", category: "web", viewed: false,
+      description: "El puente entre lo que el usuario necesita y lo que el sistema permite. Fundamentos de diseño centrado en el usuario, arquitectura de información y prototipado. Apliqué estos conocimientos para reorganizar flujos en el sistema centralizado y verificar que las interfaces no solo funcionaran, sino que fueran comprendidas por quienes las usarían.",
+      skills: ["UX Research", "Arquitectura de Información", "Prototipado", "Usabilidad", "Design Thinking"] },
+    { id: 3, title: "Scrum Foundation Professional Certificate (SFPC)", category: "agile", viewed: false,
+      description: "De participante en ceremonias a facilitador de resultados. Certificación que valida mi dominio del marco Scrum: sprints, eventos, artefactos y roles. Lo apliqué directamente en el proyecto de sistema centralizado, participando en dailies, puntos de control y asegurando que el testing fuera parte del flujo de valor, no un obstáculo al final.",
+      skills: ["Scrum", "Agile", "Facilitación", "Sprints", "Mejora Continua"] },
+    { id: 4, title: "JIRA Fundamentals Badge", category: "agile", viewed: false,
+      description: "La herramienta donde la planificación se encuentra con la ejecución. Gestión de proyectos ágiles mediante tableros, flujos de trabajo personalizados y trazabilidad de tareas. Uso JIRA para coordinar solicitudes, documentar incidencias y mantener visibilidad del avance en entornos de alta complejidad.",
+      skills: ["JIRA", "Gestión de Proyectos", "Tableros Kanban", "Trazabilidad", "Reportes"] },
+    { id: 5, title: "Facilitación para el Cambio", category: "agile", viewed: false,
+      description: "La metodología ágil solo funciona si los equipos la adoptan. Capacitación en gestión del cambio organizacional y facilitación de talleres. Me permite mediar en la transición de equipos a nuevas metodologías, reduciendo resistencia y acelerando la adopción de prácticas ágiles en contextos tradicionales.",
+      skills: ["Gestión del Cambio", "Facilitación", "Workshops", "Adopción Ágil", "Coaching"] },
+    { id: 6, title: "Introducción a la Seguridad de la Información", category: "security", viewed: false,
+      description: "Proteger datos no es solo técnica, es cultura organizacional. Comprensión de amenazas cibernéticas, principios de confidencialidad, integridad y disponibilidad, y estrategias de protección de datos. Esta base fue clave para elaborar mi documento de seguridad en el DOM y para verificar validaciones en formularios web con criterio de riesgo.",
+      skills: ["Ciberseguridad", "CIA Triad", "Gestión de Riesgos", "Protección de Datos", "Compliance"] },
+    { id: 7, title: "Fundamentos de la Carrera de Administración de Sistemas de Microsoft", category: "security", viewed: false,
+      description: "Entender la infraestructura que sostiene las aplicaciones. Administración de sistemas, gestión de redes y servicios en la nube con Microsoft Azure. Conocimiento que me permite conversar con equipos de infraestructura, entender el impacto de incidencias en el stack completo y diseñar pruebas que consideren el entorno de deployment.",
+      skills: ["Azure", "Cloud Computing", "Administración de Sistemas", "Redes", "Infraestructura"] },
+    { id: 8, title: "Excel", category: "data", viewed: false,
+      description: "La base del análisis estructurado antes de las herramientas complejas. Gestión de datos, fórmulas y tablas para organizar información de manera efectiva. Fundamento para mi evolución hacia el análisis de métricas de proyecto y, posteriormente, hacia la planificación y control de gestión en mi magíster.",
+      skills: ["Excel", "Análisis de Datos", "Fórmulas", "Tablas", "Reporting"] },
+    { id: 9, title: "Marketing Digital y Gestión Estratégica", category: "data", viewed: false,
+      description: "La tecnología bien implementada solo tiene valor si resuelve problemas de negocio reales. Mentalidad data-driven orientada a resultados, conectando métricas de comportamiento del usuario con decisiones de producto. Esta base fue fundamental para mi Magíster en Planificación y Control de Gestión, donde profundicé en la articulación entre estrategia digital y control de gestión.",
+      skills: ["Marketing Digital", "KPIs", "Google Analytics", "Growth Hacking", "Planificación Estratégica"] },
+    { id: 10, title: "Gestión Estratégica de Personas en el Estado", category: "management", viewed: false,
+      description: "El talento técnico solo rinde en un ambiente que lo potencia. Estrategias de desarrollo de talento, clima laboral y alineación de equipos con objetivos organizacionales. Aplicable a la coordinación de equipos multidisciplinarios en proyectos ágiles, especialmente en contextos de transformación digital.",
+      skills: ["Gestión de Personas", "Desarrollo de Talento", "Clima Laboral", "Liderazgo", "Sector Público"] },
+    { id: 11, title: "Tipos de Innovación y Ámbitos de Cambio", category: "management", viewed: false,
+      description: "Innovar no es solo tecnología, es reimaginar cómo trabajamos. Identificación de oportunidades de mejora y liderazgo de procesos de cambio. Me permite proponer mejoras en procesos de testing y desarrollo que trascienden el 'como siempre se hizo'.",
+      skills: ["Innovación", "Gestión del Cambio", "Mejora Continua", "Pensamiento Creativo", "Transformación Digital"] },
+    { id: 12, title: "Denuncia, Investigación y Sanción de la Violencia Organizacional", category: "management", viewed: false,
+      description: "La ética laboral como pilar de la sostenibilidad organizacional. Marco legal y procedimientos para garantizar ambientes de trabajo seguros y respetuosos. Conocimiento esencial para liderar equipos con integridad y para participar en procesos de compliance organizacional.",
+      skills: ["Ética Laboral", "Derechos Laborales", "Compliance", "Resolución de Conflictos", "Seguridad Organizacional"] }
+];
+
+let currentFilter = 'all';
+let activeBlinkTimeouts = new Map();
+
+function getFilteredCourses() {
+    if (currentFilter === 'all') return courses;
+    return courses.filter(c => c.category === currentFilter);
+}
+
+function getCategoryProgress(category) {
+    const categoryCourses = courses.filter(c => c.category === category);
+    const viewedCount = categoryCourses.filter(c => c.viewed).length;
+    return { total: categoryCourses.length, viewed: viewedCount };
+}
+
+function isCategoryCompleted(category) {
+    const progress = getCategoryProgress(category);
+    return progress.viewed === progress.total && progress.total > 0;
+}
+
+function stopBlinkingForCard(courseId) {
+    const container = document.querySelector(`.course-card-container[data-id="${courseId}"]`);
+    if (container) {
+        container.classList.remove('sustained-blink');
+        container.classList.remove('pending-blink');
+    }
+    if (activeBlinkTimeouts.has(courseId)) {
+        clearTimeout(activeBlinkTimeouts.get(courseId));
+        activeBlinkTimeouts.delete(courseId);
+    }
+}
+
+function startBlinkingForCard(courseId, durationSeconds) {
+    const container = document.querySelector(`.course-card-container[data-id="${courseId}"]`);
+    if (!container) return;
+    stopBlinkingForCard(courseId);
+    container.classList.add('sustained-blink');
+    const timeoutId = setTimeout(() => {
+        const currentContainer = document.querySelector(`.course-card-container[data-id="${courseId}"]`);
+        if (currentContainer) {
+            currentContainer.classList.remove('sustained-blink');
+        }
+        activeBlinkTimeouts.delete(courseId);
+    }, durationSeconds * 1000);
+    activeBlinkTimeouts.set(courseId, timeoutId);
+}
+
+function triggerBlinkForPendingInCategory(category) {
+    const pendingCourses = courses.filter(c => c.category === category && !c.viewed);
+    pendingCourses.forEach(pendingCourse => {
+        startBlinkingForCard(pendingCourse.id, 60);
+    });
+}
+
+function renderCategories() {
+    const container = document.getElementById('categories');
+    const categoriesList = Object.entries(categoriesConfig);
+    const buttons = `
+        <button class="category-btn ${currentFilter === 'all' ? 'active' : ''}" data-category="all">
+            Todos (${courses.length})
+        </button>
+        ${categoriesList.map(([key, cat]) => {
+            const progress = getCategoryProgress(key);
+            const completed = isCategoryCompleted(key);
+            return `
+                <button class="category-btn ${currentFilter === key ? 'active' : ''} ${completed ? 'completed' : ''}" 
+                        data-category="${key}">
+                    ${cat.icon} ${cat.name} (${progress.viewed}/${progress.total})
+                </button>
+            `;
+        }).join('')}
+    `;
+    container.innerHTML = buttons;
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const categoryKey = btn.dataset.category;
+            e.stopPropagation();
+            if (categoryKey !== 'all' && isCategoryCompleted(categoryKey)) {
+                showCategoryExperience(categoryKey);
+            } else if (categoryKey !== 'all') {
+                currentFilter = categoryKey;
+                renderCategories();
+                renderCourses();
+                document.getElementById('detailsPanel').classList.add('hidden');
+            } else {
+                currentFilter = 'all';
+                renderCategories();
+                renderCourses();
+                document.getElementById('detailsPanel').classList.add('hidden');
+            }
+        });
+    });
+}
+
+function showCourseDetails(course) {
+    const panel = document.getElementById('detailsPanel');
+    const category = categoriesConfig[course.category];
+    document.getElementById('detailCategory').textContent = `${category.icon} ${category.name}`;
+    document.getElementById('detailTitle').textContent = course.title;
+    document.getElementById('detailDescription').textContent = course.description;
+    const skillsHtml = course.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+    document.getElementById('detailSkills').innerHTML = skillsHtml;
+    panel.classList.remove('hidden');
+    setTimeout(() => {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+}
+
+function showCategoryExperience(categoryKey) {
+    const category = categoriesConfig[categoryKey];
+    const modal = document.getElementById('modal');
+    document.getElementById('modalTitle').textContent = category.experience.title;
+    const modalImage = document.getElementById('modalImage');
+    modalImage.innerHTML = '';
+    modalImage.className = 'modal-image';
+    if (category.image) {
+        const img = document.createElement('img');
+        img.src = category.image;
+        img.alt = category.name;
+        img.onerror = function() {
+            modalImage.innerHTML = category.icon || '🎯';
+            modalImage.className = 'modal-image fallback';
+            modalImage.style.background = `linear-gradient(135deg, ${category.color || '#667eea'} 0%, #111111 100%)`;
+        };
+        modalImage.appendChild(img);
+    } else {
+        modalImage.innerHTML = category.icon || '🎯';
+        modalImage.className = 'modal-image fallback';
+        modalImage.style.background = `linear-gradient(135deg, ${category.color || '#667eea'} 0%, #111111 100%)`;
+    }
+    document.getElementById('modalDescription').textContent = category.experience.description;
+    document.getElementById('modalHighlights').innerHTML = `
+        <h4>Aplicación práctica y proyectos:</h4>
+        <ul>
+            ${category.experience.projects.map(p => `<li>${p}</li>`).join('')}
+        </ul>
+    `;
+    modal.classList.add('active');
+}
+
+function viewCourse(courseId) {
+    const course = courses.find(c => c.id === courseId);
+    if (!course) return;
+    if (!course.viewed) {
+        course.viewed = true;
+        showCourseDetails(course);
+        triggerBlinkForPendingInCategory(course.category);
+        renderCategories();
+        renderCourses();
+        if (isCategoryCompleted(course.category)) {
+            renderCategories();
+        }
+    } else {
+        showCourseDetails(course);
+    }
+}
+
+function renderCourses() {
+    const grid = document.getElementById('coursesGrid');
+    const filteredCourses = getFilteredCourses();
+    const isMobile = window.innerWidth <= 768;
+    if (filteredCourses.length === 0) {
+        grid.innerHTML = '<p style="text-align: center; color: #999; padding: 40px;">No hay cursos en esta categoría</p>';
+        return;
+    }
+    grid.innerHTML = filteredCourses.map(course => `
+        <div class="course-card-container" data-id="${course.id}" data-category="${course.category}">
+            <div class="course-card ${course.category} ${course.viewed ? 'viewed' : ''}">
+                <div class="card-front">
+                    <div class="course-title">
+                        ${course.title}
+                        ${!course.viewed ? '<span class="status-dot"></span>' : ''}
+                    </div>
+                    <div class="course-category">
+                        <span></span>
+                        ${categoriesConfig[course.category].name}
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>📚 Habilidades</h4>
+                    <div class="card-back-skills">
+                        ${course.skills.map(skill => `<span class="card-back-skill">${skill}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    document.querySelectorAll('.course-card-container').forEach(container => {
+        const id = parseInt(container.dataset.id);
+        const course = courses.find(c => c.id === id);
+        if (course && course.viewed) {
+            container.classList.add('viewed-container');
+        } else {
+            container.classList.remove('viewed-container');
+        }
+        if (course && !course.viewed && activeBlinkTimeouts.has(id)) {
+            container.classList.add('sustained-blink');
+        } else if (course && course.viewed) {
+            container.classList.remove('sustained-blink');
+            if (activeBlinkTimeouts.has(id)) {
+                clearTimeout(activeBlinkTimeouts.get(id));
+                activeBlinkTimeouts.delete(id);
+            }
+        }
+        container.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const courseId = parseInt(container.dataset.id);
+            viewCourse(courseId);
+        });
+    });
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.remove('active');
+}
+
+document.querySelector('.modal-close').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modal')) closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileNavOverlay');
+    const closeBtn = document.getElementById('mobileNavClose');
+
+    function openMenu() {
+        mobileNav.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    mobileNav.querySelectorAll('.mobile-nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
+
+    let navTouchStartX = 0;
+    mobileNav.addEventListener('touchstart', (e) => {
+        navTouchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    mobileNav.addEventListener('touchend', (e) => {
+        const diff = navTouchStartX - e.changedTouches[0].clientX;
+        if (diff > 80) {
+            closeMenu();
+        }
+    }, { passive: true });
+}
+
+initMobileMenu();
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        renderCourses();
+    }, 250);
+});
+
+renderCategories();
+renderCourses();
+
+</script>
+
+<nav class="mobile-bottom-bar" aria-label="Navegación rápida móvil">
+    <a href="Principal.html" class="mobile-bottom-item">
+        <i class="fas fa-house"></i>
+        <span>Inicio</span>
+    </a>
+    <a href="Perfil.html" class="mobile-bottom-item">
+        <i class="fas fa-user-tie"></i>
+        <span>Perfil</span>
+    </a>
+    <a href="Experiencia.html" class="mobile-bottom-item">
+        <i class="fas fa-briefcase"></i>
+        <span>Experiencia</span>
+    </a>
+    <a href="Contacto.html" class="mobile-bottom-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contacto</span>
+    </a>
+</nav>
+
+</body>
+</html>
