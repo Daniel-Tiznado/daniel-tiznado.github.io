@@ -436,16 +436,19 @@ body {
                 box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
                 border-color: #3b82f6;
                 background-color: rgba(59, 130, 246, 0.05);
+				color: #484848;
             }
             50% {
                 box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.4), 0 0 0 4px rgba(59, 130, 246, 0.6);
                 border-color: #3b82f6;
-                background-color: rgba(59, 130, 246, 0.15);
+				background-color: #1a1a2e;  /* ← fondo oscuro */
+				color: #ffffff;  /* ← texto blanco */
             }
             100% {
                 box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
                 border-color: #3b82f6;
                 background-color: rgba(59, 130, 246, 0.05);
+				color: #484848;  /* ← vuelve a texto oscuro */
             }
         }
 
@@ -460,6 +463,7 @@ body {
             animation: blinkAttention 0.9s ease-in-out infinite;
             border-color: #3b82f6;
             box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+			color: #ffffff;
         }
 
         .details-panel {
@@ -1278,7 +1282,7 @@ body {
             }
         }
     </style>
-<base target="_blank">
+
 </head>
 <body>
 
@@ -1335,7 +1339,7 @@ body {
 </nav>
 
 <div class="left-dark" id="leftDark">
-    <a href="Principal.html" class="icon-link" title="Inicio"><i class="fas fa-house"></i></a>    
+    <a href="index.html" class="icon-link" title="Inicio"><i class="fas fa-house"></i></a>    
     <a href="Perfil.html" class="icon-link" title="Perfil Profesional"><i class="fas fa-user-tie"></i></a>
     <a href="Diplomados.html" class="icon-link" title="Diplomados"><i class="fas fa-award"></i></a>
     <a href="#" class="icon-link" title="Cursos"><i class="fas fa-book-open"></i></a>
@@ -1346,7 +1350,6 @@ body {
 <div class="right-dark" id="rightDark">
     <a href="Documentos.html" class="icon-link" title="Portafolio"><i class="fas fa-folder-open"></i></a>
     <a href="RRSS.html" class="icon-link" title="Publicaciones"><i class="fas fa-share-alt"></i></a>
-    <a href="#" class="icon-link" title="Hobbies"><i class="fas fa-gamepad"></i></a>
     <a href="Contacto.html" class="icon-link" title="Contacto"><i class="fas fa-envelope"></i></a>
 </div>
 
@@ -1390,6 +1393,24 @@ body {
         </div>
     </div>
 </div>
+<nav class="mobile-bottom-bar" aria-label="Navegación rápida móvil">
+    <a href="RRSS.html" class="mobile-bottom-item">
+        <i class="fas fa-share-alt"></i>
+        <span>Redes Sociales</span>
+    </a>
+    <a href="Perfil.html" class="mobile-bottom-item">
+        <i class="fas fa-award"></i>
+        <span>Diplomados</span>
+    </a>
+    <a href="Experiencia.html" class="mobile-bottom-item">
+        <i class="fas fa-briefcase"></i>
+        <span>Experiencia</span>
+    </a>
+    <a href="Contacto.html" class="mobile-bottom-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contacto</span>
+    </a>
+</nav>
 
 <script>
 (function initTooltips() {
@@ -1457,7 +1478,7 @@ const categoriesConfig = {
             projects: [
                 "Documentación técnica de seguridad en el DOM y prevención de ataques.",
                 "Validación rigurosa de formularios contra vectores de inyección.",
-                "Auditoría técnica de servicios cloud (Azure) junto a equipos de DevOps.",
+                "Auditoría técnica de servicios junto a equipos de DevOps.",
                 "Integración de criterios de seguridad en las fases tempranas de diseño."
             ]
         }
@@ -1823,24 +1844,7 @@ renderCourses();
 
 </script>
 
-<nav class="mobile-bottom-bar" aria-label="Navegación rápida móvil">
-    <a href="Principal.html" class="mobile-bottom-item">
-        <i class="fas fa-house"></i>
-        <span>Inicio</span>
-    </a>
-    <a href="Perfil.html" class="mobile-bottom-item">
-        <i class="fas fa-user-tie"></i>
-        <span>Perfil</span>
-    </a>
-    <a href="Experiencia.html" class="mobile-bottom-item">
-        <i class="fas fa-briefcase"></i>
-        <span>Experiencia</span>
-    </a>
-    <a href="Contacto.html" class="mobile-bottom-item">
-        <i class="fas fa-envelope"></i>
-        <span>Contacto</span>
-    </a>
-</nav>
+
 
 </body>
 </html>
