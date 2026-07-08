@@ -117,20 +117,24 @@
         "name": "Universidad Mayor",
         "url": "https://www.umayor.cl"
       },
-      "worksFor": [
-        {
-          "@type": "Organization",
-          "name": "JUNAEB",
-          "url": "https://www.junaeb.cl",
-          "jobTitle": "QA Engineer | Scrum Master | Procesos y Proyectos TI",
-          "startDate": "2022-09"
-        }
+"worksFor": {
+  "@type": "EmployeeRole",
+  "roleName": "QA Engineer | Scrum Master | Procesos y Proyectos TI",
+  "startDate": "2022-09",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "JUNAEB",
+    "url": "https://www.junaeb.cl/"
+  }
+}
       ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Santiago",
-        "addressCountry": "CL"
-      }
+        "addressCountry": {
+          "@type": "Country",
+          "name": "CL"
+        }
     }
   ]
 }
